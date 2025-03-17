@@ -122,6 +122,7 @@ function module:start()
 	CONFIG_FRAME.BorderSizePixel = 0
 	CONFIG_FRAME.Position = UDim2.new(1, 5, 0, 0)
 	CONFIG_FRAME.Size = UDim2.new(0, 204, 0, 121)
+    CONFIG_FRAME.Visible = false
 
 	CONFIG_CORNER.CornerRadius = UDim.new(0, 6)
 	CONFIG_CORNER.Name = "CONFIG_CORNER"
@@ -171,8 +172,11 @@ function module:start()
 	ServerHopButton.AutoButtonColor = false
 	ServerHopButton.Font = Enum.Font.Code
 	ServerHopButton.Text = "Server Hop"
-	ServerHopButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	ServerHopButton.TextColor3 = Color3.fromRGB(212, 212, 212)
 	ServerHopButton.TextSize = 14.000
+    function start:ServerHopCallback(callback)
+        ServerHopButton.MouseButton1Click:Connect(callback)
+    end
 
 	ServerHopButton_Corner.CornerRadius = UDim.new(0, 6)
 	ServerHopButton_Corner.Name = "ServerHopButton_Corner"
@@ -189,8 +193,11 @@ function module:start()
 	RejoinButton.AutoButtonColor = false
 	RejoinButton.Font = Enum.Font.Code
 	RejoinButton.Text = "Rejoin"
-	RejoinButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	RejoinButton.TextColor3 = Color3.fromRGB(212, 212, 212)
 	RejoinButton.TextSize = 14.000
+    RejoinButton.MouseButton1Click:Connect(function()
+		game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer)
+    end)
 
 	ServerHopButton_Corner_2.CornerRadius = UDim.new(0, 6)
 	ServerHopButton_Corner_2.Name = "ServerHopButton_Corner"
