@@ -208,6 +208,4 @@ function module:start()
 	return start
 end
 
-local ui = module:start()
-ui:AddPlayer("Vkzire", 1)
-ui:AddPlayer("Vkzire", 1)
+return module
