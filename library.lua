@@ -25,7 +25,7 @@ function module:start()
 	UIListLayout.Padding = UDim.new(0, 4)
 
 	UI.Name = "UI"
-	UI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	UI.Parent = game.CoreGui
 	UI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 	Main.Name = "Main"
