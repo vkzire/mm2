@@ -18,11 +18,16 @@ function module:start()
 	local ScrollFrame = Instance.new("ScrollingFrame")
 	local MENU = Instance.new("ImageButton")
 	local UIListLayout = Instance.new("UIListLayout")
-    local CONFIG_FRAME = Instance.new("Frame")
-    local UIStroke_CONFIG = Instance.new("UIStroke")
-    local ConfigTitle = Instance.new("TextLabel")
-    local UIListLayout_CONFIG = Instance.new("UIListLayout")
-    local AutoUpdateButton = Instance.new("TextButton")
+	local CONFIG_FRAME = Instance.new("Frame")
+	local CONFIG_CORNER = Instance.new("UICorner")
+	local CONFIGTITLE = Instance.new("TextLabel")
+	local CONFIGTITLE_CORNER = Instance.new("UIPadding")
+	local CFG_CONT = Instance.new("Frame")
+	local CF_CONT_CORNER = Instance.new("UIPadding")
+	local ServerHopButton = Instance.new("TextButton")
+	local ServerHopButton_Corner = Instance.new("UICorner")
+	local RejoinButton = Instance.new("TextButton")
+	local ServerHopButton_Corner_2 = Instance.new("UICorner")
 
 	UIListLayout.Parent = ScrollFrame
 	UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -44,7 +49,7 @@ function module:start()
 		local delta = input.Position - dragStart
 		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
 			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-			Main.Position = position
+		Main.Position = position
 	end
 
 	Main.InputBegan:Connect(function(input)
@@ -109,58 +114,97 @@ function module:start()
 	ScrollFrame.Size = UDim2.new(1, 0, 1, 0)
 	ScrollFrame.ScrollBarThickness = 0
 
+
+	CONFIG_FRAME.Name = "CONFIG_FRAME"
+	CONFIG_FRAME.Parent = Main
+	CONFIG_FRAME.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+	CONFIG_FRAME.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	CONFIG_FRAME.BorderSizePixel = 0
+	CONFIG_FRAME.Position = UDim2.new(1, 5, 0, 0)
+	CONFIG_FRAME.Size = UDim2.new(0, 204, 0, 121)
+
+	CONFIG_CORNER.CornerRadius = UDim.new(0, 6)
+	CONFIG_CORNER.Name = "CONFIG_CORNER"
+	CONFIG_CORNER.Parent = CONFIG_FRAME
+
+	CONFIGTITLE.Name = "CONFIGTITLE"
+	CONFIGTITLE.Parent = CONFIG_FRAME
+	CONFIGTITLE.AnchorPoint = Vector2.new(0.5, 0)
+	CONFIGTITLE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	CONFIGTITLE.BackgroundTransparency = 1.000
+	CONFIGTITLE.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	CONFIGTITLE.BorderSizePixel = 0
+	CONFIGTITLE.Position = UDim2.new(0.5, 0, 0, 0)
+	CONFIGTITLE.Size = UDim2.new(1.00000072, 0, 0, 25)
+	CONFIGTITLE.ZIndex = 4
+	CONFIGTITLE.Font = Enum.Font.Code
+	CONFIGTITLE.Text = "Additional Features"
+	CONFIGTITLE.TextColor3 = Color3.fromRGB(0, 157, 255)
+	CONFIGTITLE.TextSize = 14.000
+	CONFIGTITLE.TextStrokeTransparency = 0.850
+
+	CONFIGTITLE_CORNER.Name = "CONFIGTITLE_CORNER"
+	CONFIGTITLE_CORNER.Parent = CONFIGTITLE
+	CONFIGTITLE_CORNER.PaddingLeft = UDim.new(0, 6)
+
+	CFG_CONT.Name = "CFG_CONT"
+	CFG_CONT.Parent = CONFIG_FRAME
+	CFG_CONT.AnchorPoint = Vector2.new(0.5, 0.5)
+	CFG_CONT.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+	CFG_CONT.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	CFG_CONT.BorderSizePixel = 0
+	CFG_CONT.Position = UDim2.new(0.5, 0, 0.5, 0)
+	CFG_CONT.Size = UDim2.new(1, -10, 1, -10)
+
+	CF_CONT_CORNER.Name = "CF_CONT_CORNER"
+	CF_CONT_CORNER.Parent = CFG_CONT
+	CF_CONT_CORNER.PaddingLeft = UDim.new(0, 6)
+
+	ServerHopButton.Name = "ServerHopButton"
+	ServerHopButton.Parent = CFG_CONT
+	ServerHopButton.AnchorPoint = Vector2.new(0.5, 0)
+	ServerHopButton.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+	ServerHopButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	ServerHopButton.BorderSizePixel = 0
+	ServerHopButton.Position = UDim2.new(0.5, 0, 0.275999993, 0)
+	ServerHopButton.Size = UDim2.new(0, 116, 0, 24)
+	ServerHopButton.AutoButtonColor = false
+	ServerHopButton.Font = Enum.Font.Code
+	ServerHopButton.Text = "Server Hop"
+	ServerHopButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	ServerHopButton.TextSize = 14.000
+
+	ServerHopButton_Corner.CornerRadius = UDim.new(0, 6)
+	ServerHopButton_Corner.Name = "ServerHopButton_Corner"
+	ServerHopButton_Corner.Parent = ServerHopButton
+
+	RejoinButton.Name = "RejoinButton"
+	RejoinButton.Parent = CFG_CONT
+	RejoinButton.AnchorPoint = Vector2.new(0.5, 0)
+	RejoinButton.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+	RejoinButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	RejoinButton.BorderSizePixel = 0
+	RejoinButton.Position = UDim2.new(0.5, 0, 0.600000024, 0)
+	RejoinButton.Size = UDim2.new(0, 116, 0, 24)
+	RejoinButton.AutoButtonColor = false
+	RejoinButton.Font = Enum.Font.Code
+	RejoinButton.Text = "Rejoin"
+	RejoinButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	RejoinButton.TextSize = 14.000
+
+	ServerHopButton_Corner_2.CornerRadius = UDim.new(0, 6)
+	ServerHopButton_Corner_2.Name = "ServerHopButton_Corner"
+	ServerHopButton_Corner_2.Parent = RejoinButton
+
 	MENU.Name = "MENU"
 	MENU.Parent = Main
 	MENU.BackgroundTransparency = 1.000
 	MENU.Position = UDim2.new(0.929, 0, 0.003, 0)
 	MENU.Size = UDim2.new(0, 24, 0, 24)
 	MENU.Image = "rbxassetid://85866174662088"
-    MENU.MouseButton1Click:Connect(function()
-        CONFIG_FRAME.Visible = not CONFIG_FRAME.Visible
-    end)
-
-    CONFIG_FRAME.Name = "CONFIG_FRAME"
-    CONFIG_FRAME.Parent = Main
-    CONFIG_FRAME.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-    CONFIG_FRAME.BorderColor3 = Color3.fromRGB(0, 0, 0)
-    CONFIG_FRAME.Position = UDim2.new(0.0264550261, 0, 0.925233603, 0)
-    CONFIG_FRAME.Size = UDim2.new(0, 506, 0, 60)
-    CONFIG_FRAME.Visible = false
-    
-    UIStroke_CONFIG.Parent = CONFIG_FRAME
-    UIStroke_CONFIG.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    UIStroke_CONFIG.Color = Color3.fromRGB(255, 255, 255)
-    UIStroke_CONFIG.Thickness = 1.2
-    
-    ConfigTitle.Name = "ConfigTitle"
-    ConfigTitle.Parent = CONFIG_FRAME
-    ConfigTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    ConfigTitle.BackgroundTransparency = 1.000
-    ConfigTitle.Position = UDim2.new(0.0200000014, 0, 0, 0)
-    ConfigTitle.Size = UDim2.new(0, 109, 0, 20)
-    ConfigTitle.Font = Enum.Font.Gotham
-    ConfigTitle.Text = "Configuration"
-    ConfigTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-    ConfigTitle.TextSize = 14.000
-    ConfigTitle.TextXAlignment = Enum.TextXAlignment.Left
-    ConfigTitle.ZIndex = 4
-    
-    UIListLayout_CONFIG.Parent = CONFIG_FRAME
-    UIListLayout_CONFIG.FillDirection = Enum.FillDirection.Horizontal
-    UIListLayout_CONFIG.SortOrder = Enum.SortOrder.LayoutOrder
-    UIListLayout_CONFIG.VerticalAlignment = Enum.VerticalAlignment.Center
-    UIListLayout_CONFIG.Padding = UDim.new(0, 5)
-    
-    AutoUpdateButton.Name = "AutoUpdateButton"
-    AutoUpdateButton.Parent = CONFIG_FRAME
-    AutoUpdateButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    AutoUpdateButton.BackgroundTransparency = 1.000
-    AutoUpdateButton.Size = UDim2.new(0, 70, 0, 20)
-    AutoUpdateButton.Font = Enum.Font.Gotham
-    AutoUpdateButton.Text = "Auto-Update"
-    AutoUpdateButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-    AutoUpdateButton.TextSize = 12.000
-    
+	MENU.MouseButton1Click:Connect(function()
+		CONFIG_FRAME.Visible = not CONFIG_FRAME.Visible
+	end)
 
 	function start:AddPlayer(player, value)
 		local x = {}
