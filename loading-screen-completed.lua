@@ -51,7 +51,7 @@ G2L["4"]["RichText"] = true;
 G2L["4"]["AnchorPoint"] = Vector2.new(0.5, 0);
 G2L["4"]["Size"] = UDim2.new(0, 200, 0, 50);
 G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4"]["Text"] = string.format("<font color=\"rgb(0, 157, 255)\">Checks:</font> %s", readfile(getgenv().fileName));
+G2L["4"]["Text"] = string.format("<font color=\"rgb(0, 157, 255)\">Servers Scraped:</font> %s", readfile(getgenv().fileName));
 G2L["4"]["Position"] = UDim2.new(0.5, 0, -0.10063, 150);
 
 
