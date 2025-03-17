@@ -44,13 +44,13 @@ G2L["4"]["BorderSizePixel"] = 0;
 G2L["4"]["TextSize"] = 16;
 G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["4"]["TextColor3"] = Color3.fromRGB(0, 158, 255);
+G2L["4"]["TextColor3"] = Color3.fromRGB(255,255,255);
 G2L["4"]["BackgroundTransparency"] = 1;
 G2L["4"]["RichText"] = true;
 G2L["4"]["AnchorPoint"] = Vector2.new(0.5, 0);
 G2L["4"]["Size"] = UDim2.new(0, 200, 0, 50);
 G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4"]["Text"] = [[loading game...]];
+G2L["4"]["Text"] = string.format([[Checks: %s]], readfile(getgenv().fileName));
 G2L["4"]["Position"] = UDim2.new(0.5, 0, -0.10063, 150);
 
 
