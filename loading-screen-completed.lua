@@ -11,6 +11,7 @@ G2L["1"]["IgnoreGuiInset"] = true;
 G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 G2L["1"]["Name"] = [[LOADING_SCREEN]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ZIndex"] = 99
 
 
 -- StarterGui.LOADING_SCREEN.Frame
@@ -50,7 +51,7 @@ G2L["4"]["RichText"] = true;
 G2L["4"]["AnchorPoint"] = Vector2.new(0.5, 0);
 G2L["4"]["Size"] = UDim2.new(0, 200, 0, 50);
 G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4"]["Text"] = string.format([[Checks: %s]], readfile(getgenv().fileName));
+G2L["4"]["Text"] = string.format("<font color=\"rgb(0, 157, 255)\">Checks:</font> %s", readfile(getgenv().fileName));
 G2L["4"]["Position"] = UDim2.new(0.5, 0, -0.10063, 150);
 
 
