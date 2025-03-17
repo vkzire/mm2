@@ -13,7 +13,6 @@ local G2L = {};
 -- StarterGui.LOADING_SCREEN
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["IgnoreGuiInset"] = true;
-G2L["1"]["Enabled"] = true;
 G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 G2L["1"]["Name"] = [[LOADING_SCREEN]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
@@ -41,7 +40,7 @@ G2L["3"]["AnchorPoint"] = Vector2.new(0.5, 0);
 G2L["3"]["Size"] = UDim2.new(0, 200, 0, 50);
 G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["3"]["Text"] = [[Murder Mystery 2]];
-G2L["3"]["Position"] = UDim2.new(0.5, 0, -0.09877, 150);
+G2L["3"]["Position"] = UDim2.new(0.5, 0, -0.13795, 150);
 
 
 -- StarterGui.LOADING_SCREEN.Frame.TextLabel
@@ -57,7 +56,7 @@ G2L["4"]["AnchorPoint"] = Vector2.new(0.5, 0);
 G2L["4"]["Size"] = UDim2.new(0, 200, 0, 50);
 G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["4"]["Text"] = [[loading game...]];
-G2L["4"]["Position"] = UDim2.new(0.5, 0, -0.06145, 150);
+G2L["4"]["Position"] = UDim2.new(0.5, 0, -0.10063, 150);
 
 
 -- StarterGui.LOADING_SCREEN.Frame.ImageLabel
@@ -66,7 +65,7 @@ G2L["5"]["BorderSizePixel"] = 0;
 G2L["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["5"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["5"]["Image"] = [[rbxassetid://89376675947127]];
-G2L["5"]["Size"] = UDim2.new(0, 140, 0, 140);
+G2L["5"]["Size"] = UDim2.new(0, 175, 0, 175);
 G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["5"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
@@ -94,9 +93,9 @@ G2L["8"]["RichText"] = true;
 G2L["8"]["AnchorPoint"] = Vector2.new(0.5, 0);
 G2L["8"]["Size"] = UDim2.new(0, 200, 0, 50);
 G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8"]["Text"] = [[optimised by <font color="rgb(0, 157, 255)">vkzire</font>]];
-G2L["8"]["Position"] = UDim2.new(0.5, 0, -0.02682, 150);
+G2L["8"]["Text"] = [[interface optimised by <font color="rgb(0, 157, 255)">vkzire</font>]];
+G2L["8"]["Position"] = UDim2.new(0.5, 0, -0.066, 150);
 
 
 
-return G2L["1"];
+return G2L["1"], require;
