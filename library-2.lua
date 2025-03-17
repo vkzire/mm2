@@ -18,6 +18,11 @@ function module:start()
 	local ScrollFrame = Instance.new("ScrollingFrame")
 	local MENU = Instance.new("ImageButton")
 	local UIListLayout = Instance.new("UIListLayout")
+    local CONFIG_FRAME = Instance.new("Frame")
+    local UIStroke_CONFIG = Instance.new("UIStroke")
+    local ConfigTitle = Instance.new("TextLabel")
+    local UIListLayout_CONFIG = Instance.new("UIListLayout")
+    local AutoUpdateButton = Instance.new("TextButton")
 
 	UIListLayout.Parent = ScrollFrame
 	UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -110,6 +115,52 @@ function module:start()
 	MENU.Position = UDim2.new(0.929, 0, 0.003, 0)
 	MENU.Size = UDim2.new(0, 24, 0, 24)
 	MENU.Image = "rbxassetid://85866174662088"
+    MENU.MouseButton1Click:Connect(function()
+        CONFIG_FRAME.Visible = not CONFIG_FRAME.Visible
+    end)
+
+    CONFIG_FRAME.Name = "CONFIG_FRAME"
+    CONFIG_FRAME.Parent = Main
+    CONFIG_FRAME.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    CONFIG_FRAME.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    CONFIG_FRAME.Position = UDim2.new(0.0264550261, 0, 0.925233603, 0)
+    CONFIG_FRAME.Size = UDim2.new(0, 506, 0, 60)
+    CONFIG_FRAME.Visible = false
+    
+    UIStroke_CONFIG.Parent = CONFIG_FRAME
+    UIStroke_CONFIG.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    UIStroke_CONFIG.Color = Color3.fromRGB(255, 255, 255)
+    UIStroke_CONFIG.Thickness = 1.2
+    
+    ConfigTitle.Name = "ConfigTitle"
+    ConfigTitle.Parent = CONFIG_FRAME
+    ConfigTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    ConfigTitle.BackgroundTransparency = 1.000
+    ConfigTitle.Position = UDim2.new(0.0200000014, 0, 0, 0)
+    ConfigTitle.Size = UDim2.new(0, 109, 0, 20)
+    ConfigTitle.Font = Enum.Font.Gotham
+    ConfigTitle.Text = "Configuration"
+    ConfigTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+    ConfigTitle.TextSize = 14.000
+    ConfigTitle.TextXAlignment = Enum.TextXAlignment.Left
+    ConfigTitle.ZIndex = 4
+    
+    UIListLayout_CONFIG.Parent = CONFIG_FRAME
+    UIListLayout_CONFIG.FillDirection = Enum.FillDirection.Horizontal
+    UIListLayout_CONFIG.SortOrder = Enum.SortOrder.LayoutOrder
+    UIListLayout_CONFIG.VerticalAlignment = Enum.VerticalAlignment.Center
+    UIListLayout_CONFIG.Padding = UDim.new(0, 5)
+    
+    AutoUpdateButton.Name = "AutoUpdateButton"
+    AutoUpdateButton.Parent = CONFIG_FRAME
+    AutoUpdateButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    AutoUpdateButton.BackgroundTransparency = 1.000
+    AutoUpdateButton.Size = UDim2.new(0, 70, 0, 20)
+    AutoUpdateButton.Font = Enum.Font.Gotham
+    AutoUpdateButton.Text = "Auto-Update"
+    AutoUpdateButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+    AutoUpdateButton.TextSize = 12.000
+    
 
 	function start:AddPlayer(player, value)
 		local x = {}
