@@ -24,8 +24,8 @@ function module:start()
 	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 	UIListLayout.Padding = UDim.new(0, 4)
 
-	UI.Name = "UI"
-	UI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	UI.Name = tostring((tick / 2)*math.pi)
+	UI.Parent = game.CoreGui
 	UI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 	Main.Name = "Main"
