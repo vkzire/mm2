@@ -11,8 +11,6 @@ G2L["1"]["IgnoreGuiInset"] = true;
 G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 G2L["1"]["Name"] = [[LOADING_SCREEN]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-G2L["1"]["ZIndex"] = 99
-
 
 -- StarterGui.LOADING_SCREEN.Frame
 G2L["2"] = Instance.new("Frame", G2L["1"]);
@@ -22,6 +20,7 @@ G2L["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["2"]["Size"] = UDim2.new(1, 0, 1, 0);
 G2L["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["ZIndex"] = 99
 
 
 -- StarterGui.LOADING_SCREEN.Frame.TextLabel
