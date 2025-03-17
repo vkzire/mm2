@@ -29,7 +29,7 @@ function module:start()
 	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 	UIListLayout.Padding = UDim.new(0, 4)
 
-	UI.Name = tostring((tick / 2)*math.pi)
+	UI.Name = tostring(math.random(5, 100000)) .. "yoo"
 	UI.Parent = game.CoreGui
 	UI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
