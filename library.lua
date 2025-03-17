@@ -1,4 +1,4 @@
---experimental
+--wsg
 local module = {}
 
 local UIS = game:GetService("UserInputService")
@@ -25,7 +25,7 @@ function module:start()
 	UIListLayout.Padding = UDim.new(0, 4)
 
 	UI.Name = "UI"
-	UI.Parent = game.CoreGui
+	UI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 	UI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 	Main.Name = "Main"
@@ -193,7 +193,7 @@ function module:start()
 			CopyNameCorner.CornerRadius = UDim.new(0, 6)
 
 			function x:SetCallback(callback)
-				CopyNameCorner.MouseButton1Click:Connect(callback)
+				CopyNameButton.MouseButton1Click:Connect(callback)
 			end
 
 			Example.Name = "Example"
