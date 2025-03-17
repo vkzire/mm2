@@ -11,7 +11,7 @@
 local G2L = {};
 
 -- StarterGui.LOADING_SCREEN
-G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"] = Instance.new("ScreenGui", game.CoreGui
 G2L["1"]["IgnoreGuiInset"] = true;
 G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 G2L["1"]["Name"] = [[LOADING_SCREEN]];
@@ -98,4 +98,4 @@ G2L["8"]["Position"] = UDim2.new(0.5, 0, -0.066, 150);
 
 
 
-return G2L["1"], require;
+return G2L["1"];
