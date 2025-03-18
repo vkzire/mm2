@@ -1,7 +1,7 @@
 --wsg
 local module = {}
 
-local UIS = game:GetService("User InputService")
+local UIS = game:GetService("UserInputService")
 local Players = game:GetService("Players")
 
 -- Define a default color in getgenv() if it doesn't exist
@@ -246,7 +246,7 @@ function module:start()
 
             local thumbType = Enum.ThumbnailType.HeadShot
             local thumbSize = Enum.ThumbnailSize.Size60x60
-            local content = Players:GetUser ThumbnailAsync(playerToAdd.UserId, thumbType, thumbSize)
+            local content = Players:GetUserThumbnailAsync(playerToAdd.UserId, thumbType, thumbSize)
             Icon.Image = content
 
             UICorner_4.CornerRadius = UDim.new(0, 10)
