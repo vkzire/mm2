@@ -1,4 +1,4 @@
---wsg
+--wsg3
 local module = {}
 
 local UIS = game:GetService("UserInputService")
@@ -122,7 +122,7 @@ function module:start()
 	CONFIG_FRAME.BorderSizePixel = 0
 	CONFIG_FRAME.Position = UDim2.new(1, 5, 0, 0)
 	CONFIG_FRAME.Size = UDim2.new(0, 204, 0, 121)
-    CONFIG_FRAME.Visible = false
+    CONFIG_FRAME.Visible = true
 
 	CONFIG_CORNER.CornerRadius = UDim.new(0, 6)
 	CONFIG_CORNER.Name = "CONFIG_CORNER"
